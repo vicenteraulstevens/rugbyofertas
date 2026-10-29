@@ -2,353 +2,231 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rugby Ofertas | Equipamiento de Rugby en Argentina</title>
-<script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rugby Ofertas — Equipamiento de rugby en Mercado Libre y Amazon</title>
+<meta name="description" content="Botines, cascos, hombreras, camisetas de Los Pumas y más. Las mejores ofertas de rugby de Mercado Libre y Amazon en un solo lugar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-.line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.card-img{width:100%;height:100%;object-fit:contain;transition:transform .3s}
-.card:hover .card-img{transform:scale(1.05)}
-.shimmer{background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.4s infinite}
-@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
-.pulse-dot{animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+:root{--v:#14432a;--vm:#1f6b44;--vs:#4cb782;--oro:#f0c040;--bg:#f3f4ee;--card:#fff;--bd:#e3e5dc;--tx:#14201a;--mu:#68736b;--ml:#ffe600;--az:#ff9900}
+@media(prefers-color-scheme:dark){:root{--bg:#10150f;--card:#1a211a;--bd:#2b352b;--tx:#eef2ea;--mu:#9aa79c}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.5}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 18px}
+
+/* hero */
+.hero{background:linear-gradient(140deg,var(--v),var(--vm));color:#fff;padding:34px 0 30px;text-align:center}
+.brand{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.25rem;color:var(--oro);letter-spacing:.06em}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.1rem,6vw,3.5rem);line-height:1.05;margin:8px 0 10px}
+.hero h1 em{font-style:normal;color:var(--oro)}
+.hero p{max-width:560px;margin:0 auto 18px;opacity:.9}
+.chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:5px 14px;font-size:.82rem;font-weight:500}
+
+/* barra */
+.bar{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--bd)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding-top:10px;padding-bottom:10px}
+#q{flex:1 1 220px;min-width:0;padding:9px 14px;border-radius:99px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit;font-size:.92rem;outline:none}
+#q:focus{border-color:var(--vs)}
+.row{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;max-width:100%}
+.row::-webkit-scrollbar{display:none}
+.f{border:1px solid var(--bd);background:var(--card);color:var(--mu);border-radius:99px;padding:7px 14px;font:inherit;font-size:.82rem;font-weight:600;cursor:pointer;white-space:nowrap}
+.f:hover{color:var(--v)}
+.f.on{background:var(--v);border-color:var(--v);color:#fff}
+
+/* grilla */
+main{padding:22px 0 50px}
+.meta{font-size:.82rem;color:var(--mu);margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.14)}
+.ph{position:relative;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.ph.ml{background:linear-gradient(145deg,#fff3a0,#ffe600)}
+.ph.amz{background:linear-gradient(145deg,#2b3a36,#14201a)}
+.ph .em{font-size:3.4rem;line-height:1}
+.ph .br{position:absolute;bottom:10px;left:12px;right:12px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:#14201a;text-transform:uppercase;letter-spacing:.04em;text-align:center}
+.ph.amz .br{color:#ffd9a0}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff;padding:8px}
+.tag{position:absolute;top:9px;left:9px;font-size:.66rem;font-weight:800;padding:3px 8px;border-radius:5px;z-index:2}
+.tag.ml{background:var(--ml);color:#222}.tag.amz{background:var(--az);color:#222}
+.hot{position:absolute;top:9px;right:9px;background:#c0392b;color:#fff;font-size:.66rem;font-weight:800;padding:3px 8px;border-radius:5px;z-index:2}
+.body{padding:12px 13px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cat{font-size:.68rem;font-weight:700;color:var(--vs);text-transform:uppercase;letter-spacing:.06em}
+.t{font-size:.9rem;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.btn{margin-top:auto;display:block;text-align:center;padding:10px;border-radius:9px;font-weight:700;font-size:.85rem}
+.btn.ml{background:var(--ml);color:#222}.btn.amz{background:var(--az);color:#222}
+.btn:hover{filter:brightness(1.06)}
+.empty{grid-column:1/-1;text-align:center;padding:50px 10px;color:var(--mu)}
+
+/* confianza + pie */
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:34px}
+.trust div{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px;font-size:.88rem}
+.trust b{display:block;margin-bottom:2px}
+footer{background:var(--v);color:rgba(255,255,255,.75);text-align:center;padding:24px 18px;font-size:.78rem;line-height:1.8}
+footer strong{color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:1.1rem}
+@media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr);gap:10px}.t{font-size:.82rem}.ph .em{font-size:2.6rem}}
 </style>
 </head>
-<body class="bg-slate-100 min-h-screen flex flex-col font-sans text-slate-800">
+<body>
 
-<!-- HEADER -->
-<header class="bg-slate-900 text-white shadow-lg py-5 px-4">
-  <div class="max-w-7xl mx-auto text-center">
-    <h1 class="text-3xl md:text-4xl font-extrabold flex items-center justify-center gap-3">
-      🏉 RUGBY OFERTAS
-    </h1>
-    <p class="text-slate-400 mt-1 text-sm">Las mejores ofertas de equipamiento de rugby en Argentina</p>
-    <div class="mt-2 inline-flex items-center gap-2 bg-slate-800 border border-slate-700 px-4 py-1.5 rounded-full text-xs text-emerald-400">
-      <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-dot"></span>
-      Productos en tiempo real desde Mercado Libre · Amazon
-    </div>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">🏉 RUGBY OFERTAS</div>
+    <h1>Todo el rugby, <em>al mejor precio</em></h1>
+    <p>Botines, cascos, hombreras y camisetas de Los Pumas. Elegí acá y comprá directo en Mercado Libre o Amazon, con la garantía de siempre.</p>
+    <div class="chips" id="chips"></div>
   </div>
 </header>
 
-<!-- FILTROS -->
-<nav class="bg-white shadow-sm border-b border-slate-200 py-3 px-4 sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
-    <div class="relative w-full md:w-96">
-      <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-        <i class="fa-solid fa-search text-sm"></i>
-      </span>
-      <input type="text" id="searchInput" placeholder="Buscar producto..."
-        class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
-    </div>
-    <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto">
-      <button onclick="setFilter('todos',this)" class="filter-btn bg-emerald-600 text-white px-4 py-1.5 rounded-full text-xs font-semibold transition">Todos</button>
-      <button onclick="setFilter('pelotas',this)" class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 px-4 py-1.5 rounded-full text-xs font-semibold transition">🏉 Pelotas</button>
-      <button onclick="setFilter('calzado',this)" class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 px-4 py-1.5 rounded-full text-xs font-semibold transition">👟 Calzado</button>
-      <button onclick="setFilter('proteccion',this)" class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 px-4 py-1.5 rounded-full text-xs font-semibold transition">🛡️ Protección</button>
-      <button onclick="setFilter('vestimenta',this)" class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 px-4 py-1.5 rounded-full text-xs font-semibold transition">👕 Vestimenta</button>
-      <button onclick="setFilter('entrenamiento',this)" class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 px-4 py-1.5 rounded-full text-xs font-semibold transition">🔶 Entrenamiento</button>
-    </div>
+<div class="bar">
+  <div class="wrap">
+    <input id="q" type="search" placeholder="Buscar: botines, casco, Pumas…" autocomplete="off" aria-label="Buscar productos">
+    <div class="row" id="cats"></div>
+    <div class="row" id="stores"></div>
   </div>
-</nav>
+</div>
 
-<!-- MAIN -->
-<main class="max-w-7xl mx-auto w-full px-4 py-6 flex-grow">
-
-  <!-- DESTACADOS MANUALES (tus 4 links reales) -->
-  <section class="mb-10">
-    <div class="flex items-center gap-2 mb-4">
-      <span class="text-amber-500 text-xl">⭐</span>
-      <h2 class="text-xl font-extrabold text-slate-900">Ofertas Destacadas</h2>
-      <span class="text-xs bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">Selección del Editor</span>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="featuredGrid">
-      <!-- shimmer placeholders -->
-      <div class="shimmer h-72 rounded-xl"></div>
-      <div class="shimmer h-72 rounded-xl"></div>
-      <div class="shimmer h-72 rounded-xl"></div>
-      <div class="shimmer h-72 rounded-xl"></div>
-    </div>
-  </section>
-
-  <!-- CATÁLOGO AUTOMÁTICO DESDE API ML -->
-  <section>
-    <div class="flex items-center justify-between mb-4">
-      <h2 class="text-xl font-extrabold text-slate-900 flex items-center gap-2">
-        <i class="fa-solid fa-boxes-stacked text-emerald-600"></i> Catálogo General
-        <span class="text-xs font-normal text-slate-400 ml-1">vía API Mercado Libre</span>
-      </h2>
-      <span id="productCount" class="text-xs bg-slate-200 text-slate-700 font-bold px-3 py-1 rounded-full"></span>
-    </div>
-    <div id="apiStatus" class="text-xs text-slate-400 mb-3 flex items-center gap-2">
-      <span class="pulse-dot inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
-      Cargando productos desde Mercado Libre...
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="productGrid">
-      <div class="shimmer h-64 rounded-xl"></div>
-      <div class="shimmer h-64 rounded-xl"></div>
-      <div class="shimmer h-64 rounded-xl"></div>
-      <div class="shimmer h-64 rounded-xl"></div>
-      <div class="shimmer h-64 rounded-xl"></div>
-      <div class="shimmer h-64 rounded-xl"></div>
-      <div class="shimmer h-64 rounded-xl"></div>
-      <div class="shimmer h-64 rounded-xl"></div>
-    </div>
-  </section>
-
+<main class="wrap">
+  <div class="meta" id="meta"></div>
+  <div class="grid" id="grid"></div>
+  <div class="trust">
+    <div><b>🔒 Comprás en la tienda oficial</b>Te llevamos directo a Mercado Libre o Amazon. El pago y el envío los gestionan ellos.</div>
+    <div><b>💲 Precio siempre actual</b>No guardamos precios viejos: al tocar “Ver oferta” ves el valor real del momento.</div>
+    <div><b>📦 Sobre Amazon</b>Es envío internacional: puede aplicar impuestos de importación. Mercado Libre envía dentro de Argentina.</div>
+  </div>
 </main>
 
-<footer class="bg-slate-900 text-white py-8 px-4 mt-auto border-t border-slate-800">
-  <div class="max-w-7xl mx-auto text-center">
-    <p class="text-lg font-bold text-emerald-400 mb-1">🏉 Rugby Ofertas</p>
-    <p class="text-sm text-slate-400">Participamos en los programas de afiliados de Mercado Libre y Amazon.</p>
-    <p class="text-xs text-slate-500 mt-1">Al comprar con nuestros links podemos recibir una comisión sin costo adicional para vos.</p>
-    <p class="text-xs text-slate-600 mt-2">© 2026 Rugby Ofertas · Formosa, Argentina</p>
-  </div>
+<footer>
+  <strong>RUGBY OFERTAS</strong><br>
+  Participamos en los programas de afiliados de Mercado Libre y Amazon. Si comprás a través de nuestros links podemos recibir una comisión, sin costo adicional para vos.<br>
+  Los precios, stock y envíos dependen de cada tienda. © 2026 Rugby Ofertas · Formosa, Argentina
 </footer>
 
 <script>
-// ── IDs de afiliado ──
-var ML_ID  = 'stevensvicente20211129132140';
-var AMZ_ID = 'rugbyofertas-20';
+/* ============================================================
+   CONFIGURACIÓN — lo único que tenés que tocar
+   ============================================================ */
+var AMZ_TAG = 'rugbyofertas-20';   // tu ID de afiliado de Amazon
 
-// ── Link de afiliado ML limpio ──
-function mlAff(url) {
-  var base = url.split('?')[0].split('#')[0];
-  return base + '?partner=' + ML_ID;
-}
-function amzAff(q) {
-  return 'https://www.amazon.com/s?k=' + encodeURIComponent(q) + '&tag=' + AMZ_ID;
-}
+/* Cada producto:
+   id    -> nombre de la foto opcional: img/ID.jpg  (ej: img/ml01.jpg)
+   url   -> link limpio del producto
+   aff   -> (solo Mercado Libre) pegá acá TU link de afiliado generado en
+            mercadolibre.com.ar/l/afiliados. Si queda vacío, se usa "url".
+   hot   -> texto de etiqueta roja (opcional)                          */
+var P = [
+ /* ---------- MERCADO LIBRE ---------- */
+ {id:'ml01',store:'ml',cat:'calzado',brand:'Gilbert',hot:'DESTACADO',title:'Botines de Rugby Gilbert Sidestep — Tapones de aluminio importados',
+  url:'https://articulo.mercadolibre.com.ar/MLA-1751957466-botines-rugby-gilbert-sidestep-tapones-aluminio-importado-_JM',aff:''},
+ {id:'ml02',store:'ml',cat:'proteccion',brand:'Doyen',hot:'TOP VENTAS',title:'Casco de Rugby Protección Doyen — Negro',
+  url:'https://www.mercadolibre.com.ar/casco-rugby-proteccion-doyen-negro/up/MLAU3814770434',aff:''},
+ {id:'ml03',store:'ml',cat:'vestimenta',brand:'Los Pumas',hot:'MÁS VENDIDA',title:'Camiseta de Rugby Le Coq Sportif Los Pumas Home Fan 2024',
+  url:'https://articulo.mercadolibre.com.ar/MLA-1479349865-camiseta-de-rugby-le-coq-sportif-los-pumas-home-fan-2024-_JM',aff:''},
+ {id:'ml04',store:'ml',cat:'proteccion',brand:'Gilbert',hot:'OFERTA',title:'Hombreras de Rugby con Protecciones Gilbert — Talle M',
+  url:'https://www.mercadolibre.com.ar/hombreras-rugby-con-portecciones-gilbert-xp5t00-talle-m/up/MLAU4670696271',aff:''},
+ {id:'ml05',store:'ml',cat:'vestimenta',brand:'Picton',title:'Camiseta de Rugby Picton Harlequins Home — Elastizada Stretch',
+  url:'https://articulo.mercadolibre.com.ar/MLA-1436493448-camiseta-de-rugby-picton-harlequins-home-elastizada-stretch-_JM',aff:''},
+ {id:'ml06',store:'ml',cat:'vestimenta',brand:'Picton',title:'Camiseta de Rugby Picton Springboks Full Color 2025 — Match',
+  url:'https://articulo.mercadolibre.com.ar/MLA-1519685841-camiseta-de-rugby-picton-springboks-full-color-2025-match-_JM',aff:''},
+ {id:'ml07',store:'ml',cat:'proteccion',brand:'Null Performance',title:'Hombrera de Rugby Null Performance — Protección importada, Talle L',
+  url:'https://www.mercadolibre.com.ar/hombrera-rugby-null-performance-proteccion-importada-talle-l/up/MLAU4977051614',aff:''},
+ {id:'ml08',store:'ml',cat:'vestimenta',brand:'Los Pumas',hot:'NOVEDAD 2026',title:'Campera Pumas Rugby Le Coq Sportif Himno 2026 — Original',
+  url:'https://www.mercadolibre.com.ar/campera-pumas-rugby-le-coq-sportif-himno-2026-original/up/MLAU4500700661',aff:''},
+ {id:'ml09',store:'ml',cat:'vestimenta',brand:'All Blacks',title:'Campera All Blacks Liviana para Hombre',
+  url:'https://articulo.mercadolibre.com.ar/MLA-1576842269-campera-all-blacks-liviana-para-hombre-_JM',aff:''},
+ {id:'ml10',store:'ml',cat:'calzado',brand:'Adidas',title:'Botines Adidas Rugby Kakari SG Unisex — Azul KI8839',
+  url:'https://www.mercadolibre.com.ar/botines-adidas-rugby-kakari-sg-unisex-azul-ki8839/up/MLAU4009282233',aff:''},
+ {id:'ml11',store:'ml',cat:'vestimenta',brand:'Los Pumas',hot:'NOVEDAD 2026',title:'Camiseta Argentina Los Pumas Rugby Home Le Coq Sportif Fan 2026',
+  url:'https://articulo.mercadolibre.com.ar/MLA-1816443442-camiseta-argentina-pumas-rugby-home-le-coq-sportif-fan-2026-_JM',aff:''},
+ {id:'ml12',store:'ml',cat:'proteccion',brand:'Prócer',title:'Hombrera de Rugby Prócer — 1 Strings',
+  url:'https://www.mercadolibre.com.ar/hombrera-procer-rugby-1-strings/up/MLAU3860792096',aff:''},
+ {id:'ml13',store:'ml',cat:'vestimenta',brand:'Picton',title:'Camiseta de Rugby Picton Match — Varios modelos, XS al XXXL',
+  url:'https://articulo.mercadolibre.com.ar/MLA-1120231003-camiseta-rugby-picton-match-varios-modelos-xs-al-xxxl-_JM',aff:''},
+ {id:'ml14',store:'ml',cat:'entrenamiento',brand:'Sonnos',title:'Máquina Convergente Sonnos para Piernas M100 — A discos, negro',
+  url:'https://www.mercadolibre.com.ar/maquina-rugby-convergente-sonnos-piernas-m100-a-discos-negro/up/MLAU3842214732',aff:''},
+ {id:'ml15',store:'ml',cat:'entrenamiento',brand:'Sinergia',title:'Prensa Hack Squat Invertida 45° Profesional — Sinergia',
+  url:'https://www.mercadolibre.com.ar/prensa-hack-squat-invertida-45-profesional-sinergia/up/MLAU3275071652',aff:''},
 
-// ── Imagen: thumbnail de ML viene en baja res, la subimos a alta ──
-// ML thumbnails: reemplazar "-I.jpg" por "-O.jpg" o "-F.jpg" da imagen grande
-function bigImg(thumb) {
-  if (!thumb) return PH;
-  return thumb.replace(/-I\.jpg/,'-O.jpg').replace(/-I\.webp/,'-O.webp')
-              .replace('http://','https://');
-}
-
-// ── Placeholder SVG inline ──
-var PH = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect fill='%23f1f5f9' width='200' height='200'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-size='48'%3E%F0%9F%8F%89%3C/text%3E%3Ctext x='50%25' y='70%25' dominant-baseline='middle' text-anchor='middle' fill='%2394a3b8' font-size='11' font-family='sans-serif'%3Esin imagen%3C/text%3E%3C/svg%3E";
-
-function safeImg(src, alt) {
-  return '<img class="card-img" loading="lazy" alt="' + alt + '" src="' + src + '" '
-    + 'onerror="this.onerror=null;this.src=\'' + PH + '\'">';
-}
-
-// ══════════════════════════════════════
-//  DESTACADOS — tus 4 productos reales
-//  La imagen se carga desde la API de ML
-//  usando el ID del item
-// ══════════════════════════════════════
-var FEATURED_IDS = [
-  { id: 'MLA1751957466', cat: 'calzado',    badge: 'DESTACADO',       badgeClass: 'bg-red-600 text-white',
-    titulo: 'Botines Rugby Gilbert Sidestep — Tapones Aluminio',
-    link: mlAff('https://articulo.mercadolibre.com.ar/MLA-1751957466-botines-rugby-gilbert-sidestep-tapones-aluminio-importado-_JM') },
-  { id: 'MLA2901590144', cat: 'proteccion', badge: 'TOP VENTAS',      badgeClass: 'bg-emerald-600 text-white',
-    titulo: 'Casco de Rugby Protección Doyen — Negro',
-    link: mlAff('https://www.mercadolibre.com.ar/casco-rugby-proteccion-doyen-negro/up/MLAU3814770434') },
-  { id: 'MLA1479349865', cat: 'vestimenta', badge: 'MÁS VENDIDA',     badgeClass: 'bg-blue-600 text-white',
-    titulo: 'Camiseta Los Pumas Le Coq Sportif Home Fan 2024',
-    link: mlAff('https://articulo.mercadolibre.com.ar/MLA-1479349865-camiseta-de-rugby-le-coq-sportif-los-pumas-home-fan-2024-_JM') },
-  { id: 'MLA3770974176', cat: 'proteccion', badge: 'OFERTA',          badgeClass: 'bg-amber-500 text-white',
-    titulo: 'Hombreras Rugby Gilbert XP500 con Protecciones — Talle M',
-    link: mlAff('https://www.mercadolibre.com.ar/hombreras-rugby-con-portecciones-gilbert-xp5t00-talle-m/up/MLAU4670696271') }
+ /* ---------- AMAZON ---------- */
+ {id:'az01',store:'amz',cat:'calzado',brand:'Canterbury',hot:'DESTACADO',title:'Botines Canterbury Phoenix Unisex — Rugby, terreno firme',asin:'B09XJ6DXR6'},
+ {id:'az02',store:'amz',cat:'calzado',brand:'New Balance',title:'Botines New Balance para Hombre — Dorado metálico',asin:'B0D2BTPX3X'},
+ {id:'az03',store:'amz',cat:'vestimenta',brand:'Neleus',title:'Camiseta de Compresión Neleus para Hombre — Azul marino',asin:'B085RZDTRZ'},
+ {id:'az04',store:'amz',cat:'proteccion',brand:'Eicolorte',title:'Eicolorte — Almohadillas acolchadas de protección',asin:'B0DZGRR2YK'},
+ {id:'az05',store:'amz',cat:'proteccion',brand:'DGQY',title:'DGQY — Protector acolchado de protección deportiva',asin:'B0DP4VLZ1W'},
+ {id:'az06',store:'amz',cat:'entrenamiento',brand:'Soccerbee',title:'Chaleco de seguimiento Soccerbee para deportes de equipo',asin:'B0D37PSSG3'},
+ {id:'az07',store:'amz',cat:'entrenamiento',brand:'Entrenamiento',title:'Equipo de entrenamiento de velocidad y agilidad — Ajustable',asin:'B0HCT8T3Q2'},
+ {id:'az08',store:'amz',cat:'varios',brand:'Amazon',title:'Oferta destacada de Amazon — Ver detalles del producto',asin:'B0DFWL65L8'},
+ {id:'az09',store:'amz',cat:'varios',brand:'Amazon',title:'Oferta destacada de Amazon — Ver detalles del producto',asin:'B0DL6BBGW5'},
+ {id:'az10',store:'amz',cat:'varios',brand:'Amazon',title:'Oferta destacada de Amazon — Ver detalles del producto',asin:'B01FMK69FM'}
 ];
 
-// ══════════════════════════════════════
-//  BÚSQUEDAS PARA EL CATÁLOGO AUTOMÁTICO
-// ══════════════════════════════════════
-var SEARCHES = [
-  { q: 'pelota rugby gilbert',          cat: 'pelotas',       limit: 4 },
-  { q: 'pelota rugby entrenamiento',    cat: 'pelotas',       limit: 2 },
-  { q: 'botines rugby tapones',         cat: 'calzado',       limit: 4 },
-  { q: 'cabezal casco rugby',           cat: 'proteccion',    limit: 3 },
-  { q: 'hombreras rugby',               cat: 'proteccion',    limit: 2 },
-  { q: 'bucal protector rugby',         cat: 'proteccion',    limit: 2 },
-  { q: 'camiseta rugby pumas',          cat: 'vestimenta',    limit: 3 },
-  { q: 'short rugby',                   cat: 'vestimenta',    limit: 2 },
-  { q: 'conos entrenamiento rugby',     cat: 'entrenamiento', limit: 2 },
-  { q: 'tackle bag rugby',              cat: 'entrenamiento', limit: 2 }
-];
+/* ============================================================
+   A PARTIR DE ACÁ NO HACE FALTA TOCAR NADA
+   ============================================================ */
+var CATS  = {todos:'Todos',calzado:'👟 Calzado',proteccion:'🛡️ Protección',vestimenta:'👕 Vestimenta',entrenamiento:'💪 Entrenamiento',varios:'✨ Más ofertas'};
+var EMOJI = {calzado:'👟',proteccion:'🛡️',vestimenta:'👕',entrenamiento:'💪',varios:'🏉'};
+var STORE = {ml:'Mercado Libre',amz:'Amazon'};
+var fCat='todos', fStore='todos', fQ='';
 
-// ── Estado global ──
-var allProducts = [];   // catálogo completo cargado de la API
-var filtro = 'todos';
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function href(p){
+  if(p.store==='amz') return 'https://www.amazon.com/dp/'+p.asin+'?tag='+encodeURIComponent(AMZ_TAG);
+  return p.aff || p.url;
+}
+function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
 
-// ── Formatear precio ARS ──
-function fmtPrice(p) {
-  if (!p) return 'Ver precio →';
-  return '$' + Math.round(p).toLocaleString('es-AR');
+function card(p){
+  return '<article class="card">'
+   +'<div class="ph '+p.store+'">'
+   +  '<span class="tag '+p.store+'">'+STORE[p.store].toUpperCase()+'</span>'
+   +  (p.hot?'<span class="hot">'+esc(p.hot)+'</span>':'')
+   +  '<span class="em">'+EMOJI[p.cat]+'</span><span class="br">'+esc(p.brand)+'</span>'
+   +  '<img class="photo" data-ext="0" src="img/'+p.id+'.jpg" alt="'+esc(p.title)+'" loading="lazy">'
+   +'</div>'
+   +'<div class="body"><span class="cat">'+esc(CATS[p.cat].replace(/^\S+\s/,''))+'</span>'
+   +'<h3 class="t">'+esc(p.title)+'</h3>'
+   +'<a class="btn '+p.store+'" href="'+esc(href(p))+'" target="_blank" rel="noopener sponsored">Ver oferta en '+STORE[p.store]+' →</a>'
+   +'</div></article>';
 }
 
-// ══════════════════════════════════════
-//  CARGAR DESTACADOS desde la API de ML
-//  GET https://api.mercadolibre.com/items?ids=ID1,ID2,ID3,ID4
-// ══════════════════════════════════════
-function loadFeatured() {
-  var ids = FEATURED_IDS.map(function(f){ return f.id; }).join(',');
-  var url = 'https://api.mercadolibre.com/items?ids=' + ids + '&attributes=id,title,price,thumbnail,permalink,currency_id';
-
-  fetch(url)
-    .then(function(r){ return r.json(); })
-    .then(function(data) {
-      var grid = document.getElementById('featuredGrid');
-      var html = '';
-      FEATURED_IDS.forEach(function(feat, i) {
-        // data es un array de {code, body}
-        var item = (data[i] && data[i].code === 200) ? data[i].body : null;
-        var thumb = item ? bigImg(item.thumbnail) : PH;
-        var price = item ? fmtPrice(item.price) : 'Ver precio →';
-        html += '<div class="card bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-lg transition">'
-          + '<div class="relative bg-slate-50 h-52 flex items-center justify-center overflow-hidden p-2">'
-          + safeImg(thumb, feat.titulo)
-          + '<span class="absolute top-2 left-2 bg-yellow-400 text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded shadow">MERCADO LIBRE</span>'
-          + '<span class="absolute top-2 right-2 ' + feat.badgeClass + ' text-[10px] font-extrabold px-2 py-0.5 rounded shadow">' + feat.badge + '</span>'
-          + '</div>'
-          + '<div class="p-4 flex flex-col flex-grow">'
-          + '<h3 class="font-bold text-slate-800 text-sm mb-2 line-clamp-2">' + feat.titulo + '</h3>'
-          + '<div class="mt-auto">'
-          + '<div class="text-xl font-black text-slate-900 mb-3">' + price + '</div>'
-          + '<a href="' + feat.link + '" target="_blank" rel="noopener sponsored" '
-          + 'class="block w-full text-center bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold py-2 px-4 rounded-lg text-xs transition">'
-          + '🛒 Ver oferta en Mercado Libre →</a>'
-          + '</div></div></div>';
-      });
-      grid.innerHTML = html;
-    })
-    .catch(function() {
-      // Si la API falla, mostrar cards igual con links correctos
-      renderFeaturedFallback();
-    });
-}
-
-function renderFeaturedFallback() {
-  var grid = document.getElementById('featuredGrid');
-  var prices = ['$140.000', '$35.000', '$89.000', '$75.000'];
-  grid.innerHTML = FEATURED_IDS.map(function(f, i) {
-    return '<div class="card bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-lg transition">'
-      + '<div class="relative bg-slate-50 h-52 flex items-center justify-center overflow-hidden p-2">'
-      + safeImg(PH, f.titulo)
-      + '<span class="absolute top-2 left-2 bg-yellow-400 text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded shadow">MERCADO LIBRE</span>'
-      + '<span class="absolute top-2 right-2 ' + f.badgeClass + ' text-[10px] font-extrabold px-2 py-0.5 rounded shadow">' + f.badge + '</span>'
-      + '</div>'
-      + '<div class="p-4 flex flex-col flex-grow">'
-      + '<h3 class="font-bold text-slate-800 text-sm mb-2 line-clamp-2">' + f.titulo + '</h3>'
-      + '<div class="mt-auto">'
-      + '<div class="text-xl font-black text-slate-900 mb-3">' + prices[i] + '</div>'
-      + '<a href="' + f.link + '" target="_blank" rel="noopener sponsored" '
-      + 'class="block w-full text-center bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold py-2 px-4 rounded-lg text-xs transition">'
-      + '🛒 Ver oferta en Mercado Libre →</a>'
-      + '</div></div></div>';
-  }).join('');
-}
-
-// ══════════════════════════════════════
-//  CARGAR CATÁLOGO desde la API de ML
-//  GET https://api.mercadolibre.com/sites/MLA/search?q=...&limit=N
-//  NO requiere token — es la API pública de búsqueda
-// ══════════════════════════════════════
-function loadCatalog() {
-  var promises = SEARCHES.map(function(s) {
-    var url = 'https://api.mercadolibre.com/sites/MLA/search?q='
-      + encodeURIComponent(s.q) + '&limit=' + s.limit;
-    return fetch(url)
-      .then(function(r){ return r.json(); })
-      .then(function(data) {
-        return (data.results || []).map(function(item) {
-          return {
-            id:       item.id,
-            titulo:   item.title,
-            cat:      s.cat,
-            precio:   fmtPrice(item.price),
-            precioNum: item.price || 0,
-            thumb:    bigImg(item.thumbnail),
-            link:     mlAff(item.permalink),
-            store:    'ml'
-          };
-        });
-      })
-      .catch(function(){ return []; });
+function render(){
+  var list=P.filter(function(p){
+    return (fCat==='todos'||p.cat===fCat)&&(fStore==='todos'||p.store===fStore)
+      &&(!fQ||norm(p.title+' '+p.brand+' '+p.cat).indexOf(fQ)>-1);
   });
-
-  Promise.all(promises).then(function(results) {
-    // aplanar y deduplicar por ID
-    var seen = {};
-    allProducts = [];
-    results.forEach(function(arr) {
-      arr.forEach(function(p) {
-        if (!seen[p.id]) { seen[p.id] = true; allProducts.push(p); }
-      });
-    });
-
-    document.getElementById('apiStatus').innerHTML =
-      '<span class="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-1"></span>'
-      + allProducts.length + ' productos cargados desde Mercado Libre';
-
-    renderCatalog();
-  });
+  list.sort(function(a,b){return (b.hot?1:0)-(a.hot?1:0)});
+  document.getElementById('meta').textContent=list.length+' oferta'+(list.length===1?'':'s');
+  document.getElementById('grid').innerHTML=list.length?list.map(card).join(''):'<div class="empty">No encontramos ofertas con ese filtro. Probá con otra búsqueda.</div>';
 }
 
-// ══════════════════════════════════════
-//  RENDER CATÁLOGO
-// ══════════════════════════════════════
-function renderCatalog() {
-  var grid = document.getElementById('productGrid');
-  var count = document.getElementById('productCount');
-  var q = document.getElementById('searchInput').value.toLowerCase().trim();
-
-  var lista = allProducts.filter(function(p) {
-    var matchCat = filtro === 'todos' || p.cat === filtro;
-    var matchQ   = !q || p.titulo.toLowerCase().indexOf(q) > -1;
-    return matchCat && matchQ;
-  });
-
-  count.textContent = lista.length + ' producto' + (lista.length !== 1 ? 's' : '');
-
-  if (!lista.length) {
-    grid.innerHTML = '<div class="col-span-full text-center py-12 text-slate-400">No se encontraron productos.</div>';
-    return;
-  }
-
-  grid.innerHTML = lista.map(function(p) {
-    return '<div class="card bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-lg transition">'
-      + '<div class="relative bg-slate-50 h-48 flex items-center justify-center overflow-hidden p-2">'
-      + safeImg(p.thumb, p.titulo)
-      + '<span class="absolute top-2 left-2 bg-yellow-400 text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded shadow">MERCADO LIBRE</span>'
-      + '</div>'
-      + '<div class="p-4 flex flex-col flex-grow">'
-      + '<h3 class="font-bold text-slate-800 text-sm mb-2 line-clamp-2">' + p.titulo + '</h3>'
-      + '<div class="mt-auto">'
-      + '<div class="text-lg font-black text-slate-900 mb-3">' + p.precio + '</div>'
-      + '<a href="' + p.link + '" target="_blank" rel="noopener sponsored" '
-      + 'class="block w-full text-center bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold py-2 px-4 rounded-lg text-xs transition">'
-      + '🏷️ Ver precio actual en ML →</a>'
-      + '</div></div></div>';
-  }).join('');
+function buttons(id,map,cur,set){
+  var el=document.getElementById(id);
+  el.innerHTML=Object.keys(map).map(function(k){return '<button class="f'+(k===cur?' on':'')+'" data-k="'+k+'">'+map[k]+'</button>'}).join('');
+  el.onclick=function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    set(b.dataset.k);
+    [].forEach.call(el.children,function(x){x.classList.toggle('on',x===b)});
+    render();
+  };
 }
 
-// ── Filtro ──
-function setFilter(cat, btn) {
-  filtro = cat;
-  document.querySelectorAll('.filter-btn').forEach(function(b) {
-    b.className = 'filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 px-4 py-1.5 rounded-full text-xs font-semibold transition';
-  });
-  btn.className = 'filter-btn bg-emerald-600 text-white px-4 py-1.5 rounded-full text-xs font-semibold transition';
-  renderCatalog();
-}
+/* fotos opcionales: prueba .jpg, .webp, .png y si no hay, queda el panel de color */
+document.addEventListener('error',function(e){
+  var i=e.target; if(!i||!i.classList||!i.classList.contains('photo')) return;
+  var exts=['jpg','webp','png'], n=(+i.dataset.ext||0)+1;
+  if(n<exts.length){i.dataset.ext=n;i.src=i.src.replace(/\.(jpg|webp|png)$/,'.'+exts[n]);}
+  else i.remove();
+},true);
 
-// ── Buscador ──
-var dt;
-document.getElementById('searchInput').addEventListener('input', function() {
-  clearTimeout(dt); dt = setTimeout(renderCatalog, 250);
-});
-
-// ── INIT ──
-loadFeatured();
-loadCatalog();
+var nMl=P.filter(function(p){return p.store==='ml'}).length, nAz=P.length-nMl;
+document.getElementById('chips').innerHTML=
+  '<span class="chip">🛒 '+nMl+' ofertas en Mercado Libre</span><span class="chip">📦 '+nAz+' ofertas en Amazon</span><span class="chip">✅ Precio siempre actualizado</span>';
+buttons('cats',CATS,fCat,function(k){fCat=k});
+buttons('stores',{todos:'Todas las tiendas',ml:'Mercado Libre',amz:'Amazon'},fStore,function(k){fStore=k});
+var t; document.getElementById('q').addEventListener('input',function(e){clearTimeout(t);t=setTimeout(function(){fQ=norm(e.target.value.trim());render()},180)});
+render();
 </script>
 </body>
 </html>
