@@ -4,26 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rugby Ofertas — Equipamiento de rugby en Mercado Libre y Amazon</title>
-<meta name="description" content="Botines, cascos, hombreras, camisetas de Los Pumas y más. Las mejores ofertas de rugby de Mercado Libre y Amazon en un solo lugar.">
+<meta name="description" content="Botines, cascos, hombreras, camisetas y camperas de Los Pumas. Las mejores ofertas de rugby de Mercado Libre y Amazon en un solo lugar.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--v:#14432a;--vm:#1f6b44;--vs:#4cb782;--oro:#f0c040;--bg:#f3f4ee;--card:#fff;--bd:#e3e5dc;--tx:#14201a;--mu:#68736b;--ml:#ffe600;--az:#ff9900}
+:root{--v:#14432a;--vm:#1f6b44;--vs:#4cb782;--oro:#f0c040;--cel:#74acdf;--bg:#f3f4ee;--card:#fff;--bd:#e3e5dc;--tx:#14201a;--mu:#68736b;--ml:#ffe600;--az:#ff9900}
 @media(prefers-color-scheme:dark){:root{--bg:#10150f;--card:#1a211a;--bd:#2b352b;--tx:#eef2ea;--mu:#9aa79c}}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.5}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1240px;margin:0 auto;padding:0 18px}
 
-/* hero */
-.hero{background:linear-gradient(140deg,var(--v),var(--vm));color:#fff;padding:34px 0 30px;text-align:center}
-.brand{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.25rem;color:var(--oro);letter-spacing:.06em}
-.hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.1rem,6vw,3.5rem);line-height:1.05;margin:8px 0 10px}
+/* portada */
+.hero{background:radial-gradient(circle at 80% 0,#2a8a58 0,transparent 55%),linear-gradient(140deg,var(--v),var(--vm));color:#fff;padding:34px 0 36px;text-align:center;overflow:hidden}
+.brand{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.2rem;color:var(--oro);letter-spacing:.08em}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.3rem,7vw,4rem);line-height:1;margin:8px 0 12px}
 .hero h1 em{font-style:normal;color:var(--oro)}
-.hero p{max-width:560px;margin:0 auto 18px;opacity:.9}
+.hero p{max-width:560px;margin:0 auto 18px;opacity:.92}
+.cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.cta a{padding:11px 22px;border-radius:99px;font-weight:700;font-size:.92rem}
+.cta .p{background:var(--oro);color:#14201a}
+.cta .s{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.collage{display:flex;justify-content:center;gap:12px;margin:0 auto 20px;max-width:560px}
+.collage img{width:31%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;box-shadow:0 10px 26px rgba(0,0,0,.35);background:#fff}
+.collage img:nth-child(1){transform:rotate(-4deg) translateY(8px)}
+.collage img:nth-child(3){transform:rotate(4deg) translateY(8px)}
+.collage img:nth-child(2){transform:translateY(-6px)}
 .chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:5px 14px;font-size:.82rem;font-weight:500}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:5px 14px;font-size:.8rem;font-weight:500}
 
 /* barra */
 .bar{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--bd)}
@@ -36,37 +45,48 @@ a{color:inherit;text-decoration:none}
 .f:hover{color:var(--v)}
 .f.on{background:var(--v);border-color:var(--v);color:#fff}
 
-/* grilla */
-main{padding:22px 0 50px}
-.meta{font-size:.82rem;color:var(--mu);margin-bottom:12px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
-.card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.14)}
-.ph{position:relative;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+/* secciones */
+main{padding:6px 0 50px}
+.sec{margin-top:30px}
+.sec h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.9rem;line-height:1.1}
+.sec .sub{color:var(--mu);font-size:.9rem;margin:2px 0 14px}
+.band{background:linear-gradient(135deg,#5e9bd0,var(--cel));color:#fff;border-radius:18px;padding:22px 18px 20px}
+.band .sub{color:rgba(255,255,255,.9)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.grid.big{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.meta{font-size:.82rem;color:var(--mu);margin:0 0 12px}
+
+/* tarjeta */
+.card{background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.18)}
+.ph{position:relative;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fff}
 .ph.ml{background:linear-gradient(145deg,#fff3a0,#ffe600)}
 .ph.amz{background:linear-gradient(145deg,#2b3a36,#14201a)}
 .ph .em{font-size:3.4rem;line-height:1}
-.ph .br{position:absolute;bottom:10px;left:12px;right:12px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:#14201a;text-transform:uppercase;letter-spacing:.04em;text-align:center}
+.ph .br{position:absolute;bottom:12px;left:12px;right:12px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:#14201a;text-transform:uppercase;letter-spacing:.04em;text-align:center}
 .ph.amz .br{color:#ffd9a0}
-.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff;padding:8px}
-.tag{position:absolute;top:9px;left:9px;font-size:.66rem;font-weight:800;padding:3px 8px;border-radius:5px;z-index:2}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#fff;transition:transform .35s}
+.card:hover .ph img{transform:scale(1.04)}
+.tag{position:absolute;top:9px;left:9px;font-size:.66rem;font-weight:800;padding:3px 8px;border-radius:5px;z-index:2;box-shadow:0 1px 4px rgba(0,0,0,.25)}
 .tag.ml{background:var(--ml);color:#222}.tag.amz{background:var(--az);color:#222}
-.hot{position:absolute;top:9px;right:9px;background:#c0392b;color:#fff;font-size:.66rem;font-weight:800;padding:3px 8px;border-radius:5px;z-index:2}
+.hot{position:absolute;top:9px;right:9px;background:#c0392b;color:#fff;font-size:.66rem;font-weight:800;padding:3px 8px;border-radius:5px;z-index:2;box-shadow:0 1px 4px rgba(0,0,0,.25)}
 .body{padding:12px 13px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
 .cat{font-size:.68rem;font-weight:700;color:var(--vs);text-transform:uppercase;letter-spacing:.06em}
 .t{font-size:.9rem;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card.big .t{font-size:1rem}
 .btn{margin-top:auto;display:block;text-align:center;padding:10px;border-radius:9px;font-weight:700;font-size:.85rem}
 .btn.ml{background:var(--ml);color:#222}.btn.amz{background:var(--az);color:#222}
 .btn:hover{filter:brightness(1.06)}
 .empty{grid-column:1/-1;text-align:center;padding:50px 10px;color:var(--mu)}
 
-/* confianza + pie */
-.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:34px}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:36px}
 .trust div{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px;font-size:.88rem}
 .trust b{display:block;margin-bottom:2px}
 footer{background:var(--v);color:rgba(255,255,255,.75);text-align:center;padding:24px 18px;font-size:.78rem;line-height:1.8}
 footer strong{color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:1.1rem}
-@media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr);gap:10px}.t{font-size:.82rem}.ph .em{font-size:2.6rem}}
+.tag i{font-style:normal}.tag .s,.btn .bs{display:none}
+@media(max-width:560px){.tag .f,.btn .bf{display:none}.tag .s,.btn .bs{display:inline}.tag,.hot{font-size:.6rem;padding:3px 6px;top:7px}.tag{left:7px}.hot{right:7px}.btn{padding:9px 6px}}
+@media(max-width:560px){.grid,.grid.big{grid-template-columns:repeat(2,1fr);gap:10px}.t,.card.big .t{font-size:.82rem}.ph .em{font-size:2.6rem}.sec h2{font-size:1.6rem}.band{padding:16px 10px}}
 </style>
 </head>
 <body>
@@ -75,7 +95,13 @@ footer strong{color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:1.1
   <div class="wrap">
     <div class="brand">🏉 RUGBY OFERTAS</div>
     <h1>Todo el rugby, <em>al mejor precio</em></h1>
-    <p>Botines, cascos, hombreras y camisetas de Los Pumas. Elegí acá y comprá directo en Mercado Libre o Amazon, con la garantía de siempre.</p>
+    <p>Botines, cascos, hombreras y la ropa de Los Pumas. Elegí acá y comprá directo en Mercado Libre o Amazon, con la garantía de siempre.</p>
+    <div class="cta"><a class="p" href="#estrellas">Ver los más buscados</a><a class="s" href="#catalogo">Ver todo el catálogo</a></div>
+    <div class="collage" aria-hidden="true">
+      <img src="img/ml05.webp" alt="" onerror="this.remove()">
+      <img src="img/ml06.webp" alt="" onerror="this.remove()">
+      <img src="img/ml01.webp" alt="" onerror="this.remove()">
+    </div>
     <div class="chips" id="chips"></div>
   </div>
 </header>
@@ -89,8 +115,24 @@ footer strong{color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:1.1
 </div>
 
 <main class="wrap">
-  <div class="meta" id="meta"></div>
-  <div class="grid" id="grid"></div>
+  <section class="sec" id="estrellas">
+    <h2>🔥 Los más buscados</h2><p class="sub">La selección del editor: lo que más se consulta esta semana.</p>
+    <div class="grid big" id="gStars"></div>
+  </section>
+
+  <section class="sec" id="pumas">
+    <div class="band">
+      <h2>🇦🇷 Los Pumas 2026</h2><p class="sub">Camisetas y camperas oficiales para alentar con la celeste y blanca.</p>
+      <div class="grid big" id="gPumas"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="catalogo">
+    <h2>Todo el catálogo</h2>
+    <div class="meta" id="meta"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
   <div class="trust">
     <div><b>🔒 Comprás en la tienda oficial</b>Te llevamos directo a Mercado Libre o Amazon. El pago y el envío los gestionan ellos.</div>
     <div><b>💲 Precio siempre actual</b>No guardamos precios viejos: al tocar “Ver oferta” ves el valor real del momento.</div>
@@ -110,36 +152,36 @@ footer strong{color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:1.1
    ============================================================ */
 var AMZ_TAG = 'rugbyofertas-20';   // tu ID de afiliado de Amazon
 
-/* Cada producto:
-   id    -> nombre de la foto opcional: img/ID.jpg  (ej: img/ml01.jpg)
+/* id    -> coincide con la foto: img/ID.webp
    url   -> link limpio del producto
    aff   -> (solo Mercado Libre) pegá acá TU link de afiliado generado en
-            mercadolibre.com.ar/l/afiliados. Si queda vacío, se usa "url".
-   hot   -> texto de etiqueta roja (opcional)                          */
+            mercadolibre.com.ar/l/afiliados. Si queda vacío se usa "url".
+   star  -> 1 = aparece en "Los más buscados"
+   hot   -> texto de la etiqueta roja (opcional)                     */
 var P = [
  /* ---------- MERCADO LIBRE ---------- */
- {id:'ml01',store:'ml',cat:'calzado',brand:'Gilbert',hot:'DESTACADO',title:'Botines de Rugby Gilbert Sidestep — Tapones de aluminio importados',
+ {id:'ml01',store:'ml',cat:'calzado',brand:'Gilbert',star:1,hot:'DESTACADO',title:'Botines de Rugby Gilbert Sidestep — Tapones de aluminio importados',
   url:'https://articulo.mercadolibre.com.ar/MLA-1751957466-botines-rugby-gilbert-sidestep-tapones-aluminio-importado-_JM',aff:''},
- {id:'ml02',store:'ml',cat:'proteccion',brand:'Doyen',hot:'TOP VENTAS',title:'Casco de Rugby Protección Doyen — Negro',
+ {id:'ml02',store:'ml',cat:'proteccion',brand:'Doyen',star:1,hot:'TOP VENTAS',title:'Casco de Rugby Protección Doyen — Negro',
   url:'https://www.mercadolibre.com.ar/casco-rugby-proteccion-doyen-negro/up/MLAU3814770434',aff:''},
- {id:'ml03',store:'ml',cat:'vestimenta',brand:'Los Pumas',hot:'MÁS VENDIDA',title:'Camiseta de Rugby Le Coq Sportif Los Pumas Home Fan 2024',
+ {id:'ml03',store:'ml',cat:'vestimenta',brand:'Los Pumas',star:1,hot:'MÁS VENDIDA',title:'Camiseta de Rugby Le Coq Sportif Los Pumas Home Fan 2024',
   url:'https://articulo.mercadolibre.com.ar/MLA-1479349865-camiseta-de-rugby-le-coq-sportif-los-pumas-home-fan-2024-_JM',aff:''},
- {id:'ml04',store:'ml',cat:'proteccion',brand:'Gilbert',hot:'OFERTA',title:'Hombreras de Rugby con Protecciones Gilbert — Talle M',
+ {id:'ml04',store:'ml',cat:'proteccion',brand:'Gilbert',star:1,hot:'OFERTA',title:'Hombreras de Rugby con Protecciones Gilbert — Talle M',
   url:'https://www.mercadolibre.com.ar/hombreras-rugby-con-portecciones-gilbert-xp5t00-talle-m/up/MLAU4670696271',aff:''},
- {id:'ml05',store:'ml',cat:'vestimenta',brand:'Picton',title:'Camiseta de Rugby Picton Harlequins Home — Elastizada Stretch',
-  url:'https://articulo.mercadolibre.com.ar/MLA-1436493448-camiseta-de-rugby-picton-harlequins-home-elastizada-stretch-_JM',aff:''},
- {id:'ml06',store:'ml',cat:'vestimenta',brand:'Picton',title:'Camiseta de Rugby Picton Springboks Full Color 2025 — Match',
-  url:'https://articulo.mercadolibre.com.ar/MLA-1519685841-camiseta-de-rugby-picton-springboks-full-color-2025-match-_JM',aff:''},
- {id:'ml07',store:'ml',cat:'proteccion',brand:'Null Performance',title:'Hombrera de Rugby Null Performance — Protección importada, Talle L',
-  url:'https://www.mercadolibre.com.ar/hombrera-rugby-null-performance-proteccion-importada-talle-l/up/MLAU4977051614',aff:''},
- {id:'ml08',store:'ml',cat:'vestimenta',brand:'Los Pumas',hot:'NOVEDAD 2026',title:'Campera Pumas Rugby Le Coq Sportif Himno 2026 — Original',
+ {id:'ml05',store:'ml',cat:'vestimenta',brand:'Los Pumas',hot:'NOVEDAD 2026',title:'Campera Pumas Rugby Le Coq Sportif Himno 2026 — Original',
   url:'https://www.mercadolibre.com.ar/campera-pumas-rugby-le-coq-sportif-himno-2026-original/up/MLAU4500700661',aff:''},
- {id:'ml09',store:'ml',cat:'vestimenta',brand:'All Blacks',title:'Campera All Blacks Liviana para Hombre',
-  url:'https://articulo.mercadolibre.com.ar/MLA-1576842269-campera-all-blacks-liviana-para-hombre-_JM',aff:''},
- {id:'ml10',store:'ml',cat:'calzado',brand:'Adidas',title:'Botines Adidas Rugby Kakari SG Unisex — Azul KI8839',
-  url:'https://www.mercadolibre.com.ar/botines-adidas-rugby-kakari-sg-unisex-azul-ki8839/up/MLAU4009282233',aff:''},
- {id:'ml11',store:'ml',cat:'vestimenta',brand:'Los Pumas',hot:'NOVEDAD 2026',title:'Camiseta Argentina Los Pumas Rugby Home Le Coq Sportif Fan 2026',
+ {id:'ml06',store:'ml',cat:'vestimenta',brand:'Los Pumas',hot:'NOVEDAD 2026',title:'Camiseta Argentina Los Pumas Rugby Home Le Coq Sportif Fan 2026',
   url:'https://articulo.mercadolibre.com.ar/MLA-1816443442-camiseta-argentina-pumas-rugby-home-le-coq-sportif-fan-2026-_JM',aff:''},
+ {id:'ml07',store:'ml',cat:'vestimenta',brand:'Picton',title:'Camiseta de Rugby Picton Harlequins Home — Elastizada Stretch',
+  url:'https://articulo.mercadolibre.com.ar/MLA-1436493448-camiseta-de-rugby-picton-harlequins-home-elastizada-stretch-_JM',aff:''},
+ {id:'ml08',store:'ml',cat:'vestimenta',brand:'Picton',title:'Camiseta de Rugby Picton Springboks Full Color 2025 — Match',
+  url:'https://articulo.mercadolibre.com.ar/MLA-1519685841-camiseta-de-rugby-picton-springboks-full-color-2025-match-_JM',aff:''},
+ {id:'ml09',store:'ml',cat:'proteccion',brand:'Null Performance',title:'Hombrera de Rugby Null Performance — Protección importada, Talle L',
+  url:'https://www.mercadolibre.com.ar/hombrera-rugby-null-performance-proteccion-importada-talle-l/up/MLAU4977051614',aff:''},
+ {id:'ml10',store:'ml',cat:'vestimenta',brand:'All Blacks',title:'Campera All Blacks Liviana para Hombre',
+  url:'https://articulo.mercadolibre.com.ar/MLA-1576842269-campera-all-blacks-liviana-para-hombre-_JM',aff:''},
+ {id:'ml11',store:'ml',cat:'calzado',brand:'Adidas',title:'Botines Adidas Rugby Kakari SG Unisex — Azul KI8839',
+  url:'https://www.mercadolibre.com.ar/botines-adidas-rugby-kakari-sg-unisex-azul-ki8839/up/MLAU4009282233',aff:''},
  {id:'ml12',store:'ml',cat:'proteccion',brand:'Prócer',title:'Hombrera de Rugby Prócer — 1 Strings',
   url:'https://www.mercadolibre.com.ar/hombrera-procer-rugby-1-strings/up/MLAU3860792096',aff:''},
  {id:'ml13',store:'ml',cat:'vestimenta',brand:'Picton',title:'Camiseta de Rugby Picton Match — Varios modelos, XS al XXXL',
@@ -150,23 +192,23 @@ var P = [
   url:'https://www.mercadolibre.com.ar/prensa-hack-squat-invertida-45-profesional-sinergia/up/MLAU3275071652',aff:''},
 
  /* ---------- AMAZON ---------- */
- {id:'az01',store:'amz',cat:'calzado',brand:'Canterbury',hot:'DESTACADO',title:'Botines Canterbury Phoenix Unisex — Rugby, terreno firme',asin:'B09XJ6DXR6'},
- {id:'az02',store:'amz',cat:'calzado',brand:'New Balance',title:'Botines New Balance para Hombre — Dorado metálico',asin:'B0D2BTPX3X'},
- {id:'az03',store:'amz',cat:'vestimenta',brand:'Neleus',title:'Camiseta de Compresión Neleus para Hombre — Azul marino',asin:'B085RZDTRZ'},
- {id:'az04',store:'amz',cat:'proteccion',brand:'Eicolorte',title:'Eicolorte — Almohadillas acolchadas de protección',asin:'B0DZGRR2YK'},
- {id:'az05',store:'amz',cat:'proteccion',brand:'DGQY',title:'DGQY — Protector acolchado de protección deportiva',asin:'B0DP4VLZ1W'},
- {id:'az06',store:'amz',cat:'entrenamiento',brand:'Soccerbee',title:'Chaleco de seguimiento Soccerbee para deportes de equipo',asin:'B0D37PSSG3'},
- {id:'az07',store:'amz',cat:'entrenamiento',brand:'Entrenamiento',title:'Equipo de entrenamiento de velocidad y agilidad — Ajustable',asin:'B0HCT8T3Q2'},
- {id:'az08',store:'amz',cat:'varios',brand:'Amazon',title:'Oferta destacada de Amazon — Ver detalles del producto',asin:'B0DFWL65L8'},
- {id:'az09',store:'amz',cat:'varios',brand:'Amazon',title:'Oferta destacada de Amazon — Ver detalles del producto',asin:'B0DL6BBGW5'},
- {id:'az10',store:'amz',cat:'varios',brand:'Amazon',title:'Oferta destacada de Amazon — Ver detalles del producto',asin:'B01FMK69FM'}
+ {id:'az01',store:'amz',cat:'calzado',brand:'Canterbury',title:'Botines de rugby Canterbury Phoenix — Unisex adultos',asin:'B09XJ6DXR6'},
+ {id:'az02',store:'amz',cat:'calzado',brand:'New Balance',title:'Botines New Balance 442 Elite FG V2 para hombre',asin:'B0D2BTPX3X'},
+ {id:'az03',store:'amz',cat:'vestimenta',brand:'Neleus',title:'NELEUS — Pack de 3 camisetas de compresión para hombre (capa base)',asin:'B085RZDTRZ'},
+ {id:'az04',store:'amz',cat:'proteccion',brand:'Eicolorte',title:'Camisa acolchada protectora para hombre — Protector de pecho y costillas',asin:'B0DZGRR2YK'},
+ {id:'az05',store:'amz',cat:'proteccion',brand:'DGQY',title:'Casco blando de protección para rugby — Espuma EVA, jóvenes y adultos',asin:'B0DP4VLZ1W'},
+ {id:'az06',store:'amz',cat:'entrenamiento',brand:'Soccerbee',title:'Chaleco con GPS para seguimiento de jugadores',asin:'B0D37PSSG3'},
+ {id:'az07',store:'amz',cat:'entrenamiento',brand:'Entrenamiento',title:'Trineo de entrenamiento para velocidad y agilidad — Altura ajustable',asin:'B0HCT8T3Q2'},
+ {id:'az08',store:'amz',cat:'proteccion',brand:'Shinestone',title:'Shinestone — Armadura acolchada: camisa y pantalón corto con protección de espuma',asin:'B0DFWL65L8'},
+ {id:'az09',store:'amz',cat:'calzado',brand:'Canterbury',title:'Botines Canterbury unisex adultos — Negro y dorado',asin:'B0DL6BBGW5'},
+ {id:'az10',store:'amz',cat:'pelotas',brand:'Gilbert',title:'Pelota de rugby Gilbert G-TR4000 de entrenamiento',asin:'B01FMK69FM'}
 ];
 
 /* ============================================================
    A PARTIR DE ACÁ NO HACE FALTA TOCAR NADA
    ============================================================ */
-var CATS  = {todos:'Todos',calzado:'👟 Calzado',proteccion:'🛡️ Protección',vestimenta:'👕 Vestimenta',entrenamiento:'💪 Entrenamiento',varios:'✨ Más ofertas'};
-var EMOJI = {calzado:'👟',proteccion:'🛡️',vestimenta:'👕',entrenamiento:'💪',varios:'🏉'};
+var CATS  = {todos:'Todos',calzado:'👟 Calzado',proteccion:'🛡️ Protección',vestimenta:'👕 Vestimenta',pelotas:'🏉 Pelotas',entrenamiento:'💪 Entrenamiento'};
+var EMOJI = {calzado:'👟',proteccion:'🛡️',vestimenta:'👕',pelotas:'🏉',entrenamiento:'💪'};
 var STORE = {ml:'Mercado Libre',amz:'Amazon'};
 var fCat='todos', fStore='todos', fQ='';
 
@@ -177,28 +219,34 @@ function href(p){
 }
 function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
 
-function card(p){
-  return '<article class="card">'
-   +'<div class="ph '+p.store+'">'
-   +  '<span class="tag '+p.store+'">'+STORE[p.store].toUpperCase()+'</span>'
+function card(p,big){
+  var h=esc(href(p));
+  return '<article class="card'+(big?' big':'')+'">'
+   +'<a class="ph '+p.store+'" href="'+h+'" target="_blank" rel="noopener sponsored" aria-label="'+esc(p.title)+'">'
+   +  '<span class="tag '+p.store+'"><i class="f">'+STORE[p.store].toUpperCase()+'</i><i class="s">'+(p.store==='ml'?'ML':'AMAZON')+'</i></span>'
    +  (p.hot?'<span class="hot">'+esc(p.hot)+'</span>':'')
    +  '<span class="em">'+EMOJI[p.cat]+'</span><span class="br">'+esc(p.brand)+'</span>'
-   +  '<img class="photo" data-ext="0" src="img/'+p.id+'.jpg" alt="'+esc(p.title)+'" loading="lazy">'
-   +'</div>'
+   +  '<img class="photo" src="img/'+p.id+'.webp" alt="'+esc(p.title)+'" width="600" height="800" loading="lazy" decoding="async">'
+   +'</a>'
    +'<div class="body"><span class="cat">'+esc(CATS[p.cat].replace(/^\S+\s/,''))+'</span>'
    +'<h3 class="t">'+esc(p.title)+'</h3>'
-   +'<a class="btn '+p.store+'" href="'+esc(href(p))+'" target="_blank" rel="noopener sponsored">Ver oferta en '+STORE[p.store]+' →</a>'
+   +'<a class="btn '+p.store+'" href="'+h+'" target="_blank" rel="noopener sponsored"><span class="bf">Ver oferta en '+STORE[p.store]+' →</span><span class="bs">Ver oferta →</span></a>'
    +'</div></article>';
 }
 
 function render(){
+  var filtering = fCat!=='todos'||fStore!=='todos'||fQ!=='';
+  document.getElementById('estrellas').style.display=filtering?'none':'';
+  document.getElementById('pumas').style.display=filtering?'none':'';
+  document.getElementById('gStars').innerHTML=P.filter(function(p){return p.star}).map(function(p){return card(p,true)}).join('');
+  document.getElementById('gPumas').innerHTML=P.filter(function(p){return p.brand==='Los Pumas'}).map(function(p){return card(p,true)}).join('');
+
   var list=P.filter(function(p){
     return (fCat==='todos'||p.cat===fCat)&&(fStore==='todos'||p.store===fStore)
       &&(!fQ||norm(p.title+' '+p.brand+' '+p.cat).indexOf(fQ)>-1);
   });
-  list.sort(function(a,b){return (b.hot?1:0)-(a.hot?1:0)});
   document.getElementById('meta').textContent=list.length+' oferta'+(list.length===1?'':'s');
-  document.getElementById('grid').innerHTML=list.length?list.map(card).join(''):'<div class="empty">No encontramos ofertas con ese filtro. Probá con otra búsqueda.</div>';
+  document.getElementById('grid').innerHTML=list.length?list.map(function(p){return card(p,false)}).join(''):'<div class="empty">No encontramos ofertas con ese filtro. Probá con otra búsqueda.</div>';
 }
 
 function buttons(id,map,cur,set){
@@ -212,12 +260,9 @@ function buttons(id,map,cur,set){
   };
 }
 
-/* fotos opcionales: prueba .jpg, .webp, .png y si no hay, queda el panel de color */
+/* si una foto no existe, se oculta y queda el panel de color con la marca */
 document.addEventListener('error',function(e){
-  var i=e.target; if(!i||!i.classList||!i.classList.contains('photo')) return;
-  var exts=['jpg','webp','png'], n=(+i.dataset.ext||0)+1;
-  if(n<exts.length){i.dataset.ext=n;i.src=i.src.replace(/\.(jpg|webp|png)$/,'.'+exts[n]);}
-  else i.remove();
+  var i=e.target; if(i&&i.classList&&i.classList.contains('photo')) i.remove();
 },true);
 
 var nMl=P.filter(function(p){return p.store==='ml'}).length, nAz=P.length-nMl;
